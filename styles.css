@@ -1,0 +1,198 @@
+/* Estilos generales y cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho/alto */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f4ff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Aumentar el espacio entre los paneles en pantallas grandes */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-panel {
+        margin-right: 20px; /* Espaciado entre paneles */
+    }
+}
+
+.left-panel, .right-panel {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .left-panel, .right-panel {
+        width: 50%;
+        text-align: left;
+    }
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .right-panel {
+        margin-top: 0;
+    }
+}
+
+.logo {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ff5a5f;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 10px;
+}
+
+button.desencriptar {
+    background-color: #f3a6a9;
+}
+
+@media (min-width: 768px) {
+    button {
+        margin-bottom: 0;
+        width: 48%;
+    }
+}
+
+button:hover {
+    background-color: #d95054;
+}
+
+.nota {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.resultado-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.resultado-texto {
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f4ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: left;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.copiar {
+    padding: 10px 20px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.copiar:hover {
+    background-color: #a04545;
+}
+
+/* Estilos adicionales para tamaños de pantalla más pequeños */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .left-panel, .right-panel {
+        padding: 10px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    button {
+        padding: 8px 16px;
+        max-width: 100%;
+    }
+
+    .copiar {
+        padding: 8px 16px;
+    }
+}
